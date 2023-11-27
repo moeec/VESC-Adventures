@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>vesc</name>
+  <version>0.0.1</version>
+  <description>A ROS 2 package for VESC motor controller.</description>
+
+  <maintainer email="your-email@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- If the package has a setup.py -->
+  <!-- <exec_depend>python3-vesc-pkg</exec_depend> -->
+
+  <!-- Dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+
+  <!-- If you have other dependencies, list them here -->
+  <!-- <depend>your_dependency_package</depend> -->
+
+  <export>
+    <!-- Additional export tags, if required -->
+  </export>
+</package>
+
