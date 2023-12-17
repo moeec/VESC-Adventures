@@ -1,7 +1,3 @@
-the topics used by your VESC driver. Also, ensure that your VESC is properly configured and can handle the specified RPM.
-
-"""
-
 import rospy
 from std_msgs.msg import Float64
 import time
