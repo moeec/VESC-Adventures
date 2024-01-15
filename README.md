@@ -36,7 +36,7 @@ Drive:
 
 drive: This is specific to the AckermannDriveStamped message and contains the control commands.
 steering_angle: -180.5: This sets the steering angle of the car. The value -180.5 is presumably in degrees, but this value seems unusually high for a steering angle, which usually ranges between -45 to +45 degrees for most vehicles.
-speed: 0.50: This sets the speed of the car. The value 0.50 could be in meters per second, kilometers per hour, or another unit of speed, depending on how your system is set up.<br>
+speed: 0.50: This sets the speed of the car. The value 0.50 could be in meters per second, kilometers per hour, or another unit of speed, depending on how your system is set up.<hr>
 
 
 Given the available subscribers, publishers, and services of the `/vesc_driver_node` in ROS 2, there are several interesting Python programs you could write. Here are some example ideas:
