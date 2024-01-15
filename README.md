@@ -1,3 +1,14 @@
+For ROS2 you will need the VESC driver (there is a ROS2 fork) found here:
+
+https://github.com/f1tenth/vesc/tree/ros2
+
+Start ROS2 with:
+
+`ros2 launch vesc_driver vesc_driver_node.launch.py`
+
+If prompted "permission denied" on the serial port: `sudo chmod 777 /dev/ttyACM0`
+
+
 Given the available subscribers, publishers, and services of the `/vesc_driver_node` in ROS 2, there are several interesting Python programs you could write. Here are some example ideas:
 
 1. **Speed Profile Controller**:
