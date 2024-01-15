@@ -16,8 +16,6 @@ Once up and running you can input commands like:
 `ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: 0.0, speed: 1.0}}"`
 
 
-`ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: 0.0, speed: 1.0}}"`
-
 Given the available subscribers, publishers, and services of the `/vesc_driver_node` in ROS 2, there are several interesting Python programs you could write. Here are some example ideas:
 
 1. **Speed Profile Controller**:
