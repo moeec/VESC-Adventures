@@ -11,6 +11,8 @@ If prompted "permission denied" on the serial port: `sudo chmod 777 /dev/ttyACM0
 Once up and running you can input commands like:
 
 `ros2 topic pub /commands/motor/speed std_msgs/msg/Float64 "data: 800.0"`
+`ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: 0.0, speed: 1.0}}"`
+`ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: 0.0, speed: 1.0}}"`
 
 Given the available subscribers, publishers, and services of the `/vesc_driver_node` in ROS 2, there are several interesting Python programs you could write. Here are some example ideas:
 
