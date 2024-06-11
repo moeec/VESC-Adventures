@@ -164,3 +164,6 @@ mwesi@mwesi-developer:~/vesc_ws$
 mwesi@mwesi-developer:~/vesc_ws$ ^C
 mwesi@mwesi-developer:~/vesc_ws$ 
 
+Unsafe 
+
+rostopic pub -r 10 /commands/motor/speed std_msgs/Float64 "data: 30000.0"
