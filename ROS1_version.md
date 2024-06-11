@@ -166,4 +166,21 @@ mwesi@mwesi-developer:~/vesc_ws$
 
 Unsafe 
 
+
 rostopic pub -r 10 /commands/motor/speed std_msgs/Float64 "data: 30000.0"
+
+To make the command continuous from the command line using `rostopic pub`, you need to specify the publishing rate to ensure that the command is sent repeatedly at a fixed interval. This will prevent the motor from stopping if it requires a continuous stream of commands to operate.
+
+Here’s how you can modify your command to make it continuous:
+
+```bash
+rostopic pub -r 10 /commands/motor/speed std_msgs/Float64 "data: 30000.0"
+```
+
+In this command:
+- The `-r 10` option sets the rate of publishing to 10 Hz, meaning the message will be published ten times per second. You can adjust this rate based on what your motor controller requires.
+- `/commands/motor/speed` is the topic where the command is published.
+- `std_msgs/Float64` is the type of the message being published.
+- `"data: 30000.0"` specifies the content of the message, where `30000.0` is the speed value.
+
+This command will continuously send the speed command at a rate of 10 Hz as long as the terminal is open and the command is running. This should help in maintaining the motor operation without interruptions. Adjust the rate as necessary for your specific setup.
