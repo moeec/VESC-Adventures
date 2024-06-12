@@ -1,4 +1,4 @@
-For ROS2 you will need the VESC driver (there is a ROS2 fork) found here:
+For ROS2 you will need the VESC driver & Transport Drivers (there is a ROS2 fork, tested by me) found here:
 
 https://github.com/f1tenth/vesc/tree/ros2
 
@@ -30,6 +30,8 @@ Command Structure:
 ros2 topic pub: This is the ROS2 command to publish data to a topic.
 /ackermann_cmd: This is the name of the topic you're publishing to.
 ackermann_msgs/msg/AckermannDriveStamped: This specifies the message type that you're publishing.
+
+
 Message Components:
 
 The AckermannDriveStamped message is being populated with data in the YAML format. It has two main parts: header and drive.
@@ -81,3 +83,9 @@ Given the available subscribers, publishers, and services of the `/vesc_driver_n
 
 Each of these ideas would help in understanding the capabilities of your motor and the VESC driver, and they could be foundational for more complex robotics applications. Remember to handle the motor and connected systems 
 safely, especially when experimenting with different control strategies.
+
+Start ROS1 with:
+
+roslaunch vesc_driver vesc_driver_node.launch 
+
+Note: edit vesc_driver_node.launch with required /dev/#port if needed.
