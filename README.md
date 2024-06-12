@@ -2,6 +2,12 @@ For ROS2 you will need the VESC driver (there is a ROS2 fork) found here:
 
 https://github.com/f1tenth/vesc/tree/ros2
 
+ROS1 this is the main, this will run on ROS 1 noetic (tested by me).
+
+https://github.com/f1tenth/vesc/tree/main
+
+Use Pulldown in the top left to get branches for kinetic & foxy ROS distributions
+
 Start ROS2 with:
 
 `ros2 launch vesc_driver vesc_driver_node.launch.py`
