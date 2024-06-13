@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+roscore
+
 # Load Some Parameters for Ackermann
 
 # erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
