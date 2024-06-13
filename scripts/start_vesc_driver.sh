@@ -35,4 +35,4 @@ roslaunch vesc_ackermann vesc_to_odom_node.launch "
 
 xterm -e  "cd $(pwd)/../..;
 source devel/setup.bash;
-roslaunch ackermann_to_vesc_node.launch
+roslaunch vesc_ackermann ackermann_to_vesc_node.launch
