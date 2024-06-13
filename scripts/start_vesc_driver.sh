@@ -2,11 +2,36 @@
 
 # Load Some Parameters for Ackermann
 
-rosparam set /speed_to_erpm_gain 0.5
-rosparam set /speed_to_erpm_offset 0.2
-rosparam set /steering_angle_to_servo_gain  0.2
-rosparam set /steering_angle_to_servo_offset 0.1
-rosparam set /wheelbase 0.8
+# erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
+
+rosparam set /speed_to_erpm_gain 4614
+rosparam set /speed_to_erpm_offset 0.0
+
+# Set gains for converting acceleration to current and brake control values
+
+rosparam set /accel_to_current_gain 100
+rosparam set /accel_to_brake_gain -80
+
+# servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
+
+rosparam set /steering_angle_to_servo_gain  -1.2135
+rosparam set /steering_angle_to_servo_offset 0.5304
+
+
+rosparam set /wheelbase .25
+
+
+rosparam set /tachometer_ticks_to_meters_gain: 0.00225
+# servo smoother - limits rotation speed and smooths anything above limit
+
+rosparam set /max_servo_speed: 3.2 # radians/second
+rosparam set /servo_smoother_rate 75.0 # messages/sec
+
+# servo smoother - limits acceleration and smooths anything above limit
+
+rosparam set /max_acceleration 2.5 # meters/second^2
+rosparam set /throttle_smoother_rate 75.0 # messages/sec
+
 
 
 # launch vesc_driver_node.launch
