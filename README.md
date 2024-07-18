@@ -21,6 +21,11 @@ Once up and running you can input commands like:
 
 `ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: 0.0, speed: 1.0}}"`
 
+also
+
+`ros2 topic pub /drive ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: ''}, drive: {steering_angle: 0.0, steering_angle_velocity: 0.0, speed: 1.0, acceleration: 0.0, jerk: 0.0}}"`
+
+
 One more with detail:
 
 `ros2 topic pub /ackermann_cmd ackermann_msgs/msg/AckermannDriveStamped "{header: {stamp: now, frame_id: 'some_frame'}, drive: {steering_angle: -180.5, speed: 0.50}}"`
